@@ -8,14 +8,14 @@ const Navbar = () => {
     <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
       {/* Logo */}
       <Link to='/' className='navbar-brand'>
-        Drinks
+        Home
       </Link>
 
       {/* Menu */}
       <div className='collapse navbar-collapse'>
         <div className='navbar-nav'>
-          <Link className='nav-link' to='/'>
-            Home
+          <Link className='nav-link' to='/SingleDrink'>
+            Drinks
           </Link>
         </div>
       </div>
