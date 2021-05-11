@@ -3,12 +3,13 @@ import { Link, useHistory } from 'react-router-dom';
 
 
 interface CardProps {
-  
+  drink: Drink;
 }
 
-const DrinkCard:any = () => {
+const DrinkCard: React.FC<CardProps> = ({drink}) => {
   return (
     <div>
+      
     </div>
 
   );
