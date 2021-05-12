@@ -13,15 +13,14 @@ const HomePage = () => {
   return (
 <div id='home'>
       <div className='row text-center'>
-        <div className='col'>
+        <div className='col text-white my-3'>
           <h2>Sometimes you wanna go where everybody knows your name.</h2>
-          <h3>{drinks.length} drinks to choose from!</h3>
         </div>
       </div>
-      <div className='row'>
+      <div className='row d-flex text-center justify-content-around'>
         {drinks.map((drinks, i) => {
           return (
-            <div className='col-sm-12 col-md-3 mb-3' key={i}>
+            <div className='col-sm-12 col-md-2 mb-5' key={i}>
               <DrinkCard drinks={drinks} />
             </div>
           );

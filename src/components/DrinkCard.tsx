@@ -1,6 +1,4 @@
-import React, { useContext } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import {GlobalContext} from '../context/GlobalContext';
+import React from 'react';
 
 interface CardProps {
   drinks: Drinks;
@@ -12,7 +10,9 @@ const DrinkCard: React.FC<CardProps> = ({drinks}) => {
       <div className="dc-card-img">
         <div className="dc-bg-img" style={{backgroundImage: `url(${drinks.strDrinkThumb})`}}></div>
       </div>
-      <span>{drinks.strDrink}</span>
+      <span className='card'><strong>{drinks.strDrink}</strong></span>
+      <span><p className='mt-1'>Main ingredients:</p>{drinks.strIngredient1}, {drinks.strIngredient2}, and {drinks.strIngredient3}</span>
+
 
 
 
