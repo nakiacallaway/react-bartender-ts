@@ -1,6 +1,5 @@
 import React, { createContext, useState, useReducer } from 'react';
 import instance from '../api/apiConfig';
-import DrinkCard from '../components/DrinkCard';
 
 const initialState = {
     drinks: [],
@@ -27,9 +26,11 @@ export const GlobalProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
   
   const getDrinks = async () => {
+    console.log('Here we go')
       try {
-        let { data } = await instance.get('/drinks');
-        dispatch({ type: 'GET_PRODUCTS', payload: data, is_loading: true });
+        let { data } = await instance.get('/api/json/v1/1/search.php?s=');
+        console.log('hi mom', data)
+        dispatch({ type: 'GET_DRINKS', payload: data.drinks, is_loading: true });
       } catch (e) {
         console.log(e);
       }
@@ -54,6 +55,7 @@ export const GlobalProvider: React.FC = ({ children }) => {
             getDrinks,
             getSingleDrink,
         }}>
+          {children}
         </GlobalContext.Provider>
     );
 };
