@@ -37,6 +37,19 @@
   }
 }
 
+.dc-card-img {
+  height: 160px;
+
+}
+
 .dc-bg-img {
-  height: 100px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.container-fluid {
+  background-color: #4d8ee3;
+
 }
