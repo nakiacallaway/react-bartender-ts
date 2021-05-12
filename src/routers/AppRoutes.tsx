@@ -4,6 +4,7 @@ import HomePage from '../pages/HomePage';
 // Components
 import SingleDrink from '../pages/SingleDrink';
 import Navbar from '../components/Navbar';
+import { GlobalContext } from '../context/GlobalContext';
 
 const AppRoutes = () => {
   return (

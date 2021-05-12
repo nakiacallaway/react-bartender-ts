@@ -14,14 +14,15 @@ const HomePage = () => {
 <div id='home'>
       <div className='row text-center'>
         <div className='col'>
-          <h2>Home Page!</h2>
+          <h2>Sometimes you wanna go where everybody knows your name.</h2>
+          <h3>{drinks.length} drinks to choose from!</h3>
         </div>
       </div>
       <div className='row'>
-        {drinks.map((drink:any, i:any) => {
+        {drinks.map((drinks, i) => {
           return (
             <div className='col-sm-12 col-md-3 mb-3' key={i}>
-              <DrinkCard drink={drink} />
+              <DrinkCard drinks={drinks} />
             </div>
           );
         })}
