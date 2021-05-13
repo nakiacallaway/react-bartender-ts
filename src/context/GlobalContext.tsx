@@ -3,7 +3,7 @@ import instance from '../api/apiConfig';
 
 const initialState = {
     drinks: [],
-    drink: undefined,
+    drink: {},
     is_loading: false,
     getDrinks: () => {},
     getSingleDrink: () => {},
@@ -37,11 +37,12 @@ export const GlobalProvider: React.FC = ({ children }) => {
     };
   
   const getSingleDrink = async (drinkId: number) => {
+    console.log('hello');
     dispatch({ type: 'SET_LOADING', payload: true });
       try {
-        let { data } = await instance.get(`/drinks/${drinkId}`);
-        console.log(data);
-    dispatch({ type: 'GET_SINGLE_PRODUCT', payload: data });
+        let { data } = await instance.get(`/api/json/v1/1/lookup.php?i=${drinkId}`);
+        console.log(data.drinks[0]);
+    dispatch({ type: 'GET_SINGLE_DRINK', payload: data.drinks[0] });
     } catch (e) {
       console.log(e);
     }};

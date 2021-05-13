@@ -13,7 +13,7 @@ const AppRoutes = () => {
       <div className='container-fluid'>
         <Switch>
           <Route path='/' exact component={HomePage} />
-          <Route path='/SingleDrink' component={SingleDrink} />
+          <Route path='/SingleDrink/:idDrink' component={SingleDrink} />
         </Switch>
       </div>
     </div>

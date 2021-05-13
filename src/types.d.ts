@@ -15,7 +15,7 @@ type Drinks = {
     strInstructionsIT:string | null,
     [strInstructionsZH-HANS]: string | null,
     [strInstructionsZH-HANT]: string | null,
-    strDrinkThumb: string | null,
+    strDrinkThumb: string,
     strIngredient1:string | null,
     strIngredient2:string | null,
     strIngredient3:string | null,
@@ -54,8 +54,8 @@ type Drinks = {
 
 type InitialStateType = {
     drinks: Drinks[],
-    drink: Drinks | undefined,
+    drink: Drinks[drink],
     is_loading: boolean,
     getDrinks: () => void,
-    getSingleDrink: (drinkId: number) => void,
+    getSingleDrink: (idDrink: number) => void,
 };
