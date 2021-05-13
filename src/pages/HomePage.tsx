@@ -17,10 +17,10 @@ const HomePage = () => {
           <h2>Sometimes you wanna go where everybody knows your name.</h2>
         </div>
       </div>
-      <div className='row d-flex text-center justify-content-around'>
+      <div className='row d-flex home-five text-center justify-content-around'>
         {drinks.map((drinks, i) => {
           return (
-            <div className='col-sm-12 col-md-2 mb-5' key={i}>
+            <div className='five-columns mb-5' key={i}>
               <DrinkCard drinks={drinks} />
             </div>
           );
