@@ -35,8 +35,8 @@ const HomePage = () => {
         <div className='col text-white my-3'>
           <h2>Sometimes you wanna go where everybody knows your name.</h2>
         </div>
-        <div className='row mt-5'>
-          <div className='col'>
+        <div className='row mt-5 justify-content-center'>
+          <div className='col-md-7 '>
             <form action="">
               <div className='input-group'>
                 <input 

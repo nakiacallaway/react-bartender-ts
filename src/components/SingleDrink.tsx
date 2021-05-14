@@ -1,5 +1,4 @@
 import React from 'react';
-import { GlobalContext } from '../context/GlobalContext';
 import '../App.css';
 
 interface SingleDrink{
@@ -10,9 +9,20 @@ const SingleDrinkCard : React.FC <SingleDrink> = ({drink}) =>{
     console.log('hi',drink);
     return(
         <div className="card d-flex bg-dark my-4 col w-70 justify-content-between text-center text-white">
+            <div className="row">
+                <div className="col">
+                    <span> <h3>{drink.strDrink}</h3> </span><br />
+                    <span><h5>{drink.strCategory} </h5> </span><br />
+                </div>
+            </div>
+            
+            <div className="row">
+                <div className="col-md-4">
             <div className="card-body">
                 <img className="w-50" src={drink.strDrinkThumb} alt={drink.strDrink} />  
             </div>   
+            </div>
+            <div className="col-md-3">
             <h5>Ingredients:</h5>
             <div>{drink.strIngredient1}
             </div>                     
@@ -45,9 +55,15 @@ const SingleDrinkCard : React.FC <SingleDrink> = ({drink}) =>{
             <div>{drink.strIngredient15}
             </div> 
             <br />
+            </div>
+            <div className="col-md-4">
+                <div>
+                    {drink.strInstructions}
+                </div>
+            </div>
 
 
-            
+            </div>  
         </div>
     )
 }

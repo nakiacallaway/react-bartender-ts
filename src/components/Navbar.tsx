@@ -14,7 +14,7 @@ const Navbar = () => {
       {/* Menu */}
       <div className='collapse navbar-collapse'>
         <div className='navbar-nav'>
-          <Link className='nav-link' to='/SingleDrink'>
+          <Link className='nav-link' to='/'>
             Drinks
           </Link>
         </div>
